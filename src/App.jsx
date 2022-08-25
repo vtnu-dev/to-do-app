@@ -7,6 +7,8 @@ import './App.scss'
 
 function App() {
 	const [todos, setTodos] = useState([])
+	//const URL = 'http://localhost:5000/todos/'
+	const URL = 'https://mockend.com/vtnu-/to-do-app/todos/'
 
 	useEffect(() => {
 		const getTodos = async () => {
@@ -19,7 +21,7 @@ function App() {
 	// Fetch Todos
 	const fetchTodos = async () => {
 		try {
-			const res = await fetch('http://localhost:5000/todos')
+			const res = await fetch(URL)
 			const data = await res.json()
 			return data
 		} catch (error) {
@@ -30,7 +32,7 @@ function App() {
 	// Fetch Todo
 	const fetchTodo = async id => {
 		try {
-			const res = await fetch(`http://localhost:5000/todos/${id}`)
+			const res = await fetch(`${URL}${id}`)
 			const data = await res.json()
 			return data
 		} catch (error) {
@@ -46,7 +48,7 @@ function App() {
 			isCompleted: false,
 		}
 
-		const res = await fetch('http://localhost:5000/todos', {
+		const res = await fetch(URL, {
 			method: 'POST',
 			headers: {
 				'Content-type': 'application/json',
@@ -60,7 +62,7 @@ function App() {
 
 	// Delete Todo
 	const deleteTodoHandler = async id => {
-		await fetch(`http://localhost:5000/todos/${id}`, { method: 'DELETE' })
+		await fetch(`${URL}${id}`, { method: 'DELETE' })
 		setTodos(todos.filter(todo => todo.id !== id))
 	}
 
@@ -69,7 +71,7 @@ function App() {
 		const todoToToggle = await fetchTodo(id)
 		const updateTodo = { ...todoToToggle, isCompleted: !todoToToggle.isCompleted }
 
-		const res = await fetch(`http://localhost:5000/todos/${id}`, {
+		const res = await fetch(`${URL}${id}`, {
 			method: 'PUT',
 			headers: {
 				'Content-type': 'application/json',
@@ -85,8 +87,8 @@ function App() {
 	// Reset Todo
 	const resetTodosHandler = async () => {
 		const idForDelete = await fetchTodos()
-	for (let i = 0; i < idForDelete.length; i++) {
-			await fetch(`http://localhost:5000/todos/${idForDelete[i].id}`, { method: 'DELETE' })
+		for (let i = 0; i < idForDelete.length; i++) {
+			await fetch(`${URL}${idForDelete[i].id}`, { method: 'DELETE' })
 		}
 		setTodos([])
 	}
@@ -95,11 +97,10 @@ function App() {
 	const deleteCompletedTodosHandler = async () => {
 		const idForDelete = await fetchTodos()
 		const completedTodos = idForDelete.filter(todo => todo.isCompleted)
-		console.log(completedTodos);
+		console.log(completedTodos)
 		for (let i = 0; i < completedTodos.length; i++) {
-			await fetch(`http://localhost:5000/todos/${completedTodos[i].id}`, { method: 'DELETE' })
+			await fetch(`${URL}${completedTodos[i].id}`, { method: 'DELETE' })
 		}
-
 
 		setTodos(todos.filter(todo => !todo.isCompleted))
 	}
