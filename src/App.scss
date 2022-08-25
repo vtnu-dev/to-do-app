@@ -1,0 +1,25 @@
+.App {
+	text-align: center;
+	margin: 200px auto 0;
+	max-width: 650px;
+	padding: 0 10px;
+
+	@media (max-width: 576px) {
+		margin: 20px auto 0;
+	}
+
+
+	h1 {
+		font-size: 5rem;
+		font-weight: bold;
+		color: rgb(76, 76, 76);
+	}
+	p {
+		font-size: 3rem;
+		margin-top: 10px;
+
+		@media (max-width: 576px) {
+			font-size: 2rem;
+		}
+	}
+}

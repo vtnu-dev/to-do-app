@@ -1,0 +1,42 @@
+.todoForm {
+	margin: 20px 0;
+
+	form {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		@media (max-width: 576px) {
+flex-direction: column;
+		}
+	}
+	input {
+		width: 70%;
+		font-size: 2rem;
+		padding: 12px 15px;
+		border: none;
+		border-radius: 6px;
+		box-shadow: 5px 5px 10px rgb(164, 164, 164);
+		
+		@media (max-width: 576px) {
+			font-size: 1.6rem;
+			width: 80%;
+			margin-bottom: 20px;
+		}
+
+		&:focus {
+			outline: 1px solid #ccc;
+		}
+	}
+	Button{
+		background-color: rgb(131, 248, 129);
+
+		&:hover{
+			background-color: rgb(176, 249, 174);
+		}
+
+		//@media (max-width: 576px) {
+		//	font-size: 1.6rem;
+		//}
+	}
+}
