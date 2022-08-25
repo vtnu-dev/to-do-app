@@ -7,7 +7,7 @@
 		align-items: center;
 
 		@media (max-width: 576px) {
-flex-direction: column;
+			flex-direction: column;
 		}
 	}
 	input {
@@ -17,7 +17,7 @@ flex-direction: column;
 		border: none;
 		border-radius: 6px;
 		box-shadow: 5px 5px 10px rgb(164, 164, 164);
-		
+
 		@media (max-width: 576px) {
 			font-size: 1.6rem;
 			width: 80%;
@@ -28,15 +28,11 @@ flex-direction: column;
 			outline: 1px solid #ccc;
 		}
 	}
-	Button{
+	Button {
 		background-color: rgb(131, 248, 129);
 
-		&:hover{
+		&:hover {
 			background-color: rgb(176, 249, 174);
 		}
-
-		//@media (max-width: 576px) {
-		//	font-size: 1.6rem;
-		//}
 	}
 }

@@ -5,18 +5,17 @@
 	padding: 5px 10px;
 	background: rgb(255, 255, 255);
 	border-radius: 6px;
-	box-shadow:5px 5px 10px rgb(174, 174, 174);
+	box-shadow: 5px 5px 10px rgb(174, 174, 174);
 
 	@media (max-width: 768px) {
 		font-size: 1.6rem;
 	}
 }
 
-
 .text {
 	width: 100%;
 	text-align: left;
-	padding-left:15px;
+	padding-left: 15px;
 }
 
 .icons {

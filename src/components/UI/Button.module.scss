@@ -6,7 +6,7 @@
 	box-shadow: 5px 5px 10px rgb(164, 164, 164);
 	border-radius: 6px;
 	margin-left: 20px;
-	transition: box-shadow 0.3s, transform 0.3s, background-color 0.3s, border .3s;
+	transition: box-shadow 0.3s, transform 0.3s, background-color 0.3s, border 0.3s;
 
 	&:hover {
 		border: 1px solid rgb(160, 160, 160);
@@ -17,9 +17,6 @@
 		box-shadow: none;
 	}
 
-	&:active {
-		transform: scale(0.9);
-	}
 	&:disabled {
 		transform: none;
 		box-shadow: none;
@@ -27,7 +24,5 @@
 		svg {
 			color: gray;
 		}
-		
 	}
-
 }
