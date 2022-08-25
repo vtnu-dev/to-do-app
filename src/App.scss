@@ -1,8 +1,10 @@
 .App {
 	text-align: center;
 	margin: 200px auto 0;
-	max-width: 650px;
-	padding: 0 10px;
+	max-width: 660px;
+	padding: 0 20px 30px;
+	border-radius: 6px;
+	box-shadow: 7px 7px 20px 0px rgb(0 0 0 / 30%);
 
 	@media (max-width: 576px) {
 		margin: 20px auto 0;
