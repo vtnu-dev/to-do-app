@@ -8,7 +8,8 @@ import './App.scss'
 function App() {
 	const [todos, setTodos] = useState([])
 	//const URL = 'http://localhost:5000/todos/'
-	const URL = 'https://my-json-server.typicode.com/vtnu-dev/todo-app/todos/'
+	//const URL = 'https://my-json-server.typicode.com/vtnu-dev/todo-app/todos/'
+	const URL = 'https://mockend.com/vtnu-dev/todo-app/todos/'
 
 	useEffect(() => {
 		const getTodos = async () => {

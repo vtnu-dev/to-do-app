@@ -1,0 +1,8 @@
+{
+	"User": {
+	  "name": { "string": { "minLength": 3, "maxLength": 10 } },
+	  "online": { "boolean": {} },
+	  "picture": { "regexp": "https://…" }
+	},
+	"todos": []
+ }
