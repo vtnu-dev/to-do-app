@@ -9,7 +9,7 @@ function App() {
 	const [todos, setTodos] = useState([])
 	//const URL = 'http://localhost:5000/todos/'
 	//const URL = 'https://my-json-server.typicode.com/vtnu-dev/todo-app/todos/'
-	const URL = 'https://waw-todo-app.herokuapp.com/todos/'
+	const URL = 'https://waw-todo.herokuapp.com/todos/'
 
 	useEffect(() => {
 		const getTodos = async () => {
